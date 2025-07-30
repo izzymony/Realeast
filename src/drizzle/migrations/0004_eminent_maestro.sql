@@ -1,0 +1,1 @@
+ALTER TABLE "properties" ALTER COLUMN "price" SET DEFAULT '0';

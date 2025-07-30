@@ -10,6 +10,10 @@ import Testimonials from "./components/Testimonials";
 import Ready from "@/app/components/Ready"
 import Footer from "./components/Footer";
 import Header from "./components/Header"
+import Properties from "./components/Properties";
+import Link from 'next/link'
+
+
 
 interface Features {
   label: string;
@@ -92,6 +96,8 @@ export default function Home() {
   const [isVisible, setIsVisible] = useState(false);
   const [ , setIsOpen] = useState(false);
 
+
+
   const toggleMenu = () => {
     setIsVisible(!isVisible);
     setIsOpen(true);
@@ -102,6 +108,7 @@ export default function Home() {
     setIsOpen(false);
   }
 
+ 
   return (
     <div className="">
       <Nav />
@@ -268,6 +275,8 @@ export default function Home() {
                 </button>
               ))}
             </div>
+
+           
           </div>
 
           {/* Desktop listing header */}
@@ -335,9 +344,11 @@ export default function Home() {
                    {/*  <button className="p-2 border-2 border-black hover:bg-black hover:text-white transition-colors px-4 py-1 rounded-full  w-[120px]  text-sm font-medium">
                       View Deal
                     </button> */}
+                    <Link className="" href={''}>
                      <button className="border-2 border-black p-2 text-black rounded-full w-[120px]  -mt-1 text-[17px] font-semibold">
               View Deal
             </button>
+            </Link>
                   </div>
                   <h2 className="text-lg font-semibold text-gray-900 line-clamp-1">{property.title}</h2>
                   <p className="text-gray-500 text-sm mt-1 line-clamp-1">{property.location}</p>
@@ -359,13 +370,21 @@ export default function Home() {
                 </div>
               </div>
             ))}
+
+             <Properties />
           </div>
+
+            
           </section>  
           <div className="text-center mt-6">
+            <Link href={'/properties'}>
             <button className="bg-black font-semibold text-white py-3 px-6 rounded-full hover:bg-gray-800 transition w-full sm:w-auto">
               View All Properties
             </button>
+           </Link> 
           </div>
+
+          
         </section>
 
         {/* Video Section */}
