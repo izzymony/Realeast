@@ -11,7 +11,7 @@ export default async function PropertiesPage() {
       <div className="p-8 text-center">
         <h1 className="text-2xl font-bold">No Properties Found</h1>
         <p className="mt-4 text-gray-600">
-          We couldn't find any properties in the database.
+          We couldn &apos;t find any properties in the database.
         </p>
         <div className="mt-8 p-4 bg-gray-100 rounded-lg text-left">
           <h2 className="font-semibold">Debug Information:</h2>

@@ -1,4 +1,4 @@
-import {table} from 'console'
+
 import { pgTable, uuid, varchar, integer, timestamp } from "drizzle-orm/pg-core";
 
 export const PropertiesTable = pgTable("properties", {
