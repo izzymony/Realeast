@@ -10,7 +10,7 @@ import Testimonials from "./components/Testimonials";
 import Ready from "@/app/components/Ready"
 import Footer from "./components/Footer";
 import Header from "./components/Header"
-import Properties from "./components/Properties";
+
 import Link from 'next/link'
 
 
@@ -371,7 +371,7 @@ export default function Home() {
               </div>
             ))}
 
-             <Properties />
+             
           </div>
 
             
