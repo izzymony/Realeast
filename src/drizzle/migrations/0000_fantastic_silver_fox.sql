@@ -6,7 +6,6 @@ CREATE TABLE "properties" (
 	"bedrooms" varchar (255) NOT NULL,
 	"bathrooms" varchar (255) NOT NULL,
 	"area" integer NOT NULL,
-	"created_at" timestamp DEFAULT now() NOT NULL,
-	"updated_at" timestamp DEFAULT now() NOT NULL,
+	
 	CONSTRAINT "properties_title_unique" UNIQUE("title")
 );
