@@ -2,7 +2,14 @@ import type { Metadata } from "next";
 import { Inter } from 'next/font/google';
 import "./globals.css";
 
-const inter = Inter({ subsets: ['latin'] });
+// Initialize with fallback options
+const inter = Inter({
+  subsets: ['latin'],
+  display: 'swap',
+  fallback: ['system-ui', 'arial'],
+  adjustFontFallback: true,
+  // preload: true // Uncomment if you want to preload
+});
 
 export const metadata: Metadata = {
   title: "Create Next App",
@@ -16,9 +23,7 @@ export default function RootLayout({
 }>) {
   return (
     <html lang="en">
-      <body
-       className={`${inter.className}  antialiased`}>
-      
+      <body className={`${inter.className} antialiased`}>
         {children}
       </body>
     </html>
