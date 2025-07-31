@@ -1,10 +1,12 @@
 // app/properties/page.tsx
+"use server"
 import { getProperties } from '@/app/actions/properties';
 import PropertyCard from '@/app/components/PropertyCard';
 import Nav from '../components/Nav';
-import Footer from '../components/Footer';
-export default async function PropertiesPage() {
-  const properties = await getProperties();
+import Footer from '../components/Footer'
+
+ export default async function PropertiesPage() {
+  const properties = await getProperties()  as Property[];
 
   if (!properties.length) {
     return (

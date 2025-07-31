@@ -2,7 +2,9 @@
 
 import Image from 'next/image';
 
-interface Property {
+
+
+ interface Property {
   id: string;
   price: string;
   title: string;
