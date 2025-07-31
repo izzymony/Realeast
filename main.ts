@@ -1,7 +1,8 @@
 import postgres from 'postgres';
 import { drizzle } from 'drizzle-orm/postgres-js';
 import { PropertiesTable } from './src/drizzle/schema';
-import { v4 as uuidv4 } from 'uuid';
+
+
 
 async function main() {
   const sql = postgres(process.env.DATABASE_URL!, {
