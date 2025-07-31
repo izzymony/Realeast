@@ -9,6 +9,8 @@ const nextConfig: NextConfig = {
       // Add any other image hostnames you use
     ],
   },
+
+  output: process.env.NODE_ENV === 'production' ? 'standalone' : undefined,
 };
 
 export default nextConfig;

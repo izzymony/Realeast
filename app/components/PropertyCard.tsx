@@ -44,6 +44,39 @@ export default function PropertyCard({ property }: { property: Property }) {
        <h2 className="text-lg font-semibold text-gray-900 line-clamp-1">{property.title}</h2>
                   <p className="text-gray-500 text-sm mt-1 line-clamp-1">{property.address}</p>
                   <hr className="my-4 border-gray-100" />
+
+                  <div className="flex justify-between gap-4">
+          <div className="flex items-center gap-2 flex-1">
+            <Image
+              className="object-contain"
+              src="/icons8-bed-50 (1).png"
+              width={18}
+              height={18}
+              alt="Bedrooms"
+            />
+            <span className="text-gray-500 text-xs">{property.bedrooms} bedrooms</span>
+          </div>
+          <div className="flex items-center gap-2 flex-1">
+            <Image
+              className="object-contain"
+              src="/icons8-bathtub-50.png"
+              width={18}
+              height={18}
+              alt="Bathrooms"
+            />
+            <span className="text-gray-500 text-xs">{property.bathrooms} bathrooms</span>
+          </div>
+          <div className="flex items-center gap-2 flex-1">
+            <Image
+              className="object-contain"
+              src="/icons8-surface-64.png"
+              width={18}
+              height={18}
+              alt="Area"
+            />
+            <span className="text-gray-500 text-xs">{property.area} sqft</span>
+          </div>
+         </div>
       </div>
     </div>
   );
