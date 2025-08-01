@@ -4,6 +4,7 @@ import { PropertiesTable } from '@/src/drizzle/schema';
 import { sql } from 'drizzle-orm';
 
 export async function getProperties() {
+             
   try {
     // 1. First verify database connection
     const connectionTest = await db.execute(sql`SELECT 1`);
