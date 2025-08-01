@@ -36,6 +36,13 @@
       "when": 1753911321012,
       "tag": "0004_eminent_maestro",
       "breakpoints": true
+    },
+    {
+      "idx": 5,
+      "version": "7",
+      "when": 1754045208933,
+      "tag": "0005_round_demogoblin",
+      "breakpoints": true
     }
   ]
 }

@@ -1,5 +1,5 @@
 
-import { pgTable, uuid, varchar, integer } from "drizzle-orm/pg-core";
+import { pgTable, uuid, varchar, integer, timestamp } from "drizzle-orm/pg-core";
 
 export const PropertiesTable = pgTable("properties", {
   id: uuid("id").primaryKey().defaultRandom(),
@@ -9,5 +9,6 @@ export const PropertiesTable = pgTable("properties", {
   bedrooms: varchar("bedrooms" , {length: 255}).notNull(),
   bathrooms: varchar("bathrooms" , {length: 255}).notNull(),
   area: integer("area").notNull(),
-  
+  createdAt: timestamp("created_at").defaultNow().notNull(),
+  updatedAt: timestamp("updated_at").defaultNow().notNull(),
 });

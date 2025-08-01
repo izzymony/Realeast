@@ -1,25 +1,21 @@
-import 'dotenv/config';
 import { defineConfig } from 'drizzle-kit';
+import 'dotenv/config';
 
 if (!process.env.DATABASE_URL) {
-  throw new Error('DATABASE_URL is not set in environment variables');
+  throw new Error('DATABASE_URL is missing in .env');
 }
 
 export default defineConfig({
-  out: './src/drizzle/migrations',
   schema: './src/drizzle/schema.ts',
+  out: './src/drizzle/migrations',
   dialect: 'postgresql',
-  
+   // Explicitly specify pg driver
+
   dbCredentials: {
-    // Always append sslmode for Railway
-    url: process.env.DATABASE_URL + 
-      (process.env.NODE_ENV === 'production' 
-        ? '?sslmode=require' 
-        : '?sslmode=prefer'
-      ),
+    url: process.env.DATABASE_URL,
+    ssl: { rejectUnauthorized: false } // Force-disable SSL verification
   },
 
-  // These are the only valid configuration options
   verbose: true,
-  strict: true,
+  strict: true
 });
