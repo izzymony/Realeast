@@ -3,6 +3,7 @@ import { drizzle } from 'drizzle-orm/postgres-js';
 import { PropertiesTable } from './src/drizzle/schema';
 
 
+
 async function main() {
    
   const sql = postgres(process.env.DATABASE_URL!, {
