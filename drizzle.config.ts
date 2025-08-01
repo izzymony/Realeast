@@ -1,9 +1,8 @@
-import { table } from 'console';
 import 'dotenv/config';
 import { defineConfig } from 'drizzle-kit';
 
-if(!process.env.DATABASE_URL){
-  throw new Error('DATABASE_URL is not set in environment variables')
+if (!process.env.DATABASE_URL) {
+  throw new Error('DATABASE_URL is not set in environment variables');
 }
 
 export default defineConfig({
@@ -12,14 +11,15 @@ export default defineConfig({
   dialect: 'postgresql',
   
   dbCredentials: {
-    url: process.env.DATABASE_URL!,
-
-    ssl: process.env.NODE_ENV ==='production'
-    ? {rejectUnauthorized:false} : false,
+    // Always append sslmode for Railway
+    url: process.env.DATABASE_URL + 
+      (process.env.NODE_ENV === 'production' 
+        ? '?sslmode=require' 
+        : '?sslmode=prefer'
+      ),
   },
 
-  verbose:true,
-  strict:true,
-
-
+  // These are the only valid configuration options
+  verbose: true,
+  strict: true,
 });
