@@ -8,8 +8,8 @@
     "lint": "next lint",
     "db:generate": "drizzle-kit generate:pg",
     "db:migrate": "tsx src/drizzle/migrate.ts",
-    "build": "drizzle-kit migrate && next build", 
-  "vercel-build": "npm run build" 
+    "build": "drizzle-kit migrate && next build"
+  
   },
   "dependencies": {
     "dotenv": "^17.2.0",

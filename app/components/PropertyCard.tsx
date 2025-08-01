@@ -31,7 +31,7 @@ export default function PropertyCard({ property }: { property: Property }) {
       <div className="p-4">
          <div className="flex justify-between items-start mb-2">
                     <p className="text-black font-bold text-xl">
-                      {property.price}
+                      ${property.price}
                       <span className="text-gray-400 text-sm ml-1">/month</span>
                     </p>
                    {/*  <button className="p-2 border-2 border-black hover:bg-black hover:text-white transition-colors px-4 py-1 rounded-full  w-[120px]  text-sm font-medium">
