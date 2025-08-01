@@ -5,6 +5,7 @@ import { PropertiesTable } from './src/drizzle/schema';
 
 
 async function main() {
+   
   const sql = postgres(process.env.DATABASE_URL!, {
     max: 1,
     idle_timeout: 20,
