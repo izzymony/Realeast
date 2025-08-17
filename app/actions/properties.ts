@@ -14,6 +14,7 @@ export async function getProperties() {
 
     // 2. Execute query with explicit error handling
     const properties = await db.select().from(PropertiesTable).execute();
+    console.log("Fetched properties:", JSON.stringify(properties, null, 2)); 
     
     // 3. Validate response
     if (!Array.isArray(properties)) {
